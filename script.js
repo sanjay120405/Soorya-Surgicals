@@ -48,25 +48,32 @@ const statsObserver = new IntersectionObserver((entries) => {
 const statsSection = document.querySelector('.stats-section');
 if (statsSection) statsObserver.observe(statsSection);
 
-// ---- Product Filter (products.html) ----
-const filterBtns = document.querySelectorAll('.fbtn');
+// ---- Product Sidebar Filter (products.html) ----
+const sidebarBtns = document.querySelectorAll('.cat-sidebar-item');
 const catSections = document.querySelectorAll('.cat-section');
 
-filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-        filterBtns.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
+function showCategory(filter) {
+    catSections.forEach(sec => {
+        sec.classList.toggle('hidden', sec.dataset.cat !== filter);
+    });
+    sidebarBtns.forEach(b => b.classList.toggle('active', b.dataset.filter === filter));
+}
 
-        const filter = btn.dataset.filter;
-        catSections.forEach(sec => {
-            if (filter === 'all' || sec.dataset.cat === filter) {
-                sec.classList.remove('hidden');
-            } else {
-                sec.classList.add('hidden');
+if (sidebarBtns.length) {
+    // Show first category by default
+    const firstFilter = sidebarBtns[0].dataset.filter;
+    showCategory(firstFilter);
+
+    sidebarBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            showCategory(btn.dataset.filter);
+            // Scroll content to top on mobile
+            if (window.innerWidth < 960) {
+                document.querySelector('.products-content')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
         });
     });
-});
+}
 
 // ---- Contact Form Submit ----
 const form = document.querySelector('#contactForm');

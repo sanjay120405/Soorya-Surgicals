@@ -48,30 +48,53 @@
     </div>
 </div>
 
-<!-- FILTER BAR -->
-<div class="filter-bar">
-    <div class="filter-inner">
-        <div class="filter-scroll">
-            <button class="fbtn active" data-filter="all">🏷️ All Products</button>
-            <button class="fbtn" data-filter="furniture">🏥 Hospital Furniture</button>
-            <button class="fbtn" data-filter="mobility">🦽 Mobility Aids</button>
-            <button class="fbtn" data-filter="respiratory">🫁 Respiratory</button>
-            <button class="fbtn" data-filter="ortho">🦴 Orthopaedic</button>
-            <button class="fbtn" data-filter="diagnostic">🩺 Diagnostics</button>
-            <button class="fbtn" data-filter="surgical">🔬 Surgical Instruments</button>
-            <button class="fbtn" data-filter="consumables">🧤 Consumables & PPE</button>
-            <button class="fbtn" data-filter="care">🛏️ Patient Care</button>
-        </div>
-    </div>
-</div>
+<!-- PRODUCTS WITH SIDEBAR -->
+<div style="background: var(--light); padding-top: 0.5rem;">
+<div class="products-page-wrap">
 
-<!-- PRODUCTS -->
-<section class="products-section">
-    <div class="products-wrap">
+    <!-- SIDEBAR -->
+    <aside class="cat-sidebar">
+        <div class="cat-sidebar-label">Product Categories</div>
+        <button class="cat-sidebar-item active" data-filter="furniture">
+            <div class="si-icon">🏥</div>
+            <span class="si-name">Hospital Furniture</span>
+        </button>
+        <button class="cat-sidebar-item" data-filter="mobility">
+            <div class="si-icon">🦽</div>
+            <span class="si-name">Mobility Aids</span>
+        </button>
+        <button class="cat-sidebar-item" data-filter="respiratory">
+            <div class="si-icon">🫁</div>
+            <span class="si-name">Respiratory</span>
+        </button>
+        <button class="cat-sidebar-item" data-filter="ortho">
+            <div class="si-icon">🦴</div>
+            <span class="si-name">Orthopaedic Supports</span>
+        </button>
+        <button class="cat-sidebar-item" data-filter="diagnostic">
+            <div class="si-icon">🩺</div>
+            <span class="si-name">Diagnostics & Monitoring</span>
+        </button>
+        <button class="cat-sidebar-item" data-filter="surgical">
+            <div class="si-icon">🔬</div>
+            <span class="si-name">Surgical Instruments</span>
+        </button>
+        <button class="cat-sidebar-item" data-filter="consumables">
+            <div class="si-icon">🧤</div>
+            <span class="si-name">Consumables & PPE</span>
+        </button>
+        <button class="cat-sidebar-item" data-filter="care">
+            <div class="si-icon">🛏️</div>
+            <span class="si-name">Patient Care Aids</span>
+        </button>
+    </aside>
+
+    <!-- CONTENT -->
+    <div class="products-content">
 
         <!-- Hospital Furniture -->
         <div class="cat-section" data-cat="furniture">
-            <div class="cat-title"><span class="bar"></span>🏥 Hospital Furniture & Beds</div>
+            <div class="cat-header"><div class="cat-num">01</div><div><h3>Hospital Furniture & Beds</h3><p>ICU beds, stretchers, trolleys and ward furniture</p></div></div>
             <div class="products-grid">
                 <div class="prod-card">
                     <div class="prod-img"><img src="Products/icu-bed.png" alt="ICU Bed" loading="lazy"></div>
@@ -126,7 +149,7 @@
 
         <!-- Mobility Aids -->
         <div class="cat-section" data-cat="mobility">
-            <div class="cat-title"><span class="bar"></span>🦽 Mobility Aids</div>
+            <div class="cat-header"><div class="cat-num">02</div><div><h3>Mobility Aids</h3><p>Wheelchairs, walkers, crutches and commode chairs</p></div></div>
             <div class="products-grid">
                 <div class="prod-card">
                     <div class="prod-img"><img src="Products/wheel-chairs.jpg" alt="Wheel Chair" loading="lazy"></div>
@@ -165,7 +188,7 @@
 
         <!-- Respiratory -->
         <div class="cat-section" data-cat="respiratory">
-            <div class="cat-title"><span class="bar"></span>🫁 Respiratory Equipment</div>
+            <div class="cat-header"><div class="cat-num">03</div><div><h3>Respiratory Equipment</h3><p>Oxygen concentrators, CPAP, BiPAP and nebulizers</p></div></div>
             <div class="products-grid">
                 <div class="prod-card">
                     <div class="prod-img"><img src="Products/o2 concentrator.jpeg" alt="O2 Concentrator" loading="lazy"></div>
@@ -208,7 +231,7 @@
 
         <!-- Orthopaedic -->
         <div class="cat-section" data-cat="ortho">
-            <div class="cat-title"><span class="bar"></span>🦴 Orthopaedic Supports</div>
+            <div class="cat-header"><div class="cat-num">04</div><div><h3>Orthopaedic Supports</h3><p>Braces, belts, collars and cushions for joint care</p></div></div>
             <div class="products-grid">
                 <div class="prod-card">
                     <div class="prod-img"><img src="Products/Ankle-Support.jpg" alt="Ankle Support" loading="lazy"></div>
@@ -263,7 +286,7 @@
 
         <!-- Diagnostics -->
         <div class="cat-section" data-cat="diagnostic">
-            <div class="cat-title"><span class="bar"></span>🩺 Diagnostic & Monitoring Equipment</div>
+            <div class="cat-header"><div class="cat-num">05</div><div><h3>Diagnostic & Monitoring Equipment</h3><p>ECG machines, BP monitors, stethoscopes and glucometers</p></div></div>
             <div class="products-grid">
                 <div class="prod-card">
                     <div class="prod-img"><img src="Products/ECG-Machine.jpg" alt="ECG Machine" loading="lazy"></div>
@@ -318,7 +341,7 @@
 
         <!-- Surgical Instruments -->
         <div class="cat-section" data-cat="surgical">
-            <div class="cat-title"><span class="bar"></span>🔬 Surgical Instruments & Sterilization</div>
+            <div class="cat-header"><div class="cat-num">06</div><div><h3>Surgical Instruments & Sterilization</h3><p>Forceps, scissors, autoclaves and sterilizers</p></div></div>
             <div class="products-grid">
                 <div class="prod-card">
                     <div class="prod-img"><img src="Products/artery-forceps.jpg" alt="Artery Forceps" loading="lazy"></div>
@@ -397,7 +420,7 @@
 
         <!-- Consumables & PPE -->
         <div class="cat-section" data-cat="consumables">
-            <div class="cat-title"><span class="bar"></span>🧤 Consumables & PPE</div>
+            <div class="cat-header"><div class="cat-num">07</div><div><h3>Consumables & PPE</h3><p>Gloves, masks, diapers, gowns and disposables</p></div></div>
             <div class="products-grid">
                 <div class="prod-card">
                     <div class="prod-img"><img src="Products/bandages.jpg" alt="Bandages" loading="lazy"></div>
@@ -456,7 +479,7 @@
 
         <!-- Patient Care Aids -->
         <div class="cat-section" data-cat="care">
-            <div class="cat-title"><span class="bar"></span>🛏️ Patient Care Aids</div>
+            <div class="cat-header"><div class="cat-num">08</div><div><h3>Patient Care Aids</h3><p>Air beds, water beds and home care essentials</p></div></div>
             <div class="products-grid">
                 <div class="prod-card">
                     <div class="prod-img"><img src="Products/air-bed.jpg" alt="Air Bed" loading="lazy"></div>
@@ -473,8 +496,9 @@
             </div>
         </div>
 
-    </div>
-</section>
+    </div><!-- end products-content -->
+</div><!-- end products-page-wrap -->
+</div><!-- end bg wrapper -->
 
 <!-- CTA -->
 <section class="cta-banner">
